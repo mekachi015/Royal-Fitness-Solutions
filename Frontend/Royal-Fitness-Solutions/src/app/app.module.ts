@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms'; // Import FormsModule
 import { HttpClientModule } from '@angular/common/http';
 import { AuthCompComponent } from './pages/authentication page/auth-comp/auth-comp.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthCompComponent,
+    UserProfileComponent,
 
   ],
   imports: [

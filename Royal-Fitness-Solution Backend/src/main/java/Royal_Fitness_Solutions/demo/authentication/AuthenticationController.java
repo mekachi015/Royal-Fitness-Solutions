@@ -1,10 +1,8 @@
 package Royal_Fitness_Solutions.demo.authentication;
 
+import Royal_Fitness_Solutions.demo.user.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -27,10 +25,11 @@ public class AuthenticationController {
         return ResponseEntity.ok(service.authenticate(request));
     }
 
-    @GetMapping("/user")
-    public ResponseEntity<User> getUserInfo() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        User user = (User) authentication.getPrincipal();
+    @GetMapping("/user/{userId}")
+    public ResponseEntity<User> getUserById(
+            @PathVariable Integer userId
+    ) {
+        Royal_Fitness_Solutions.demo.user.User user = service.getUserById(userId);
         return ResponseEntity.ok(user);
     }
 }

@@ -14,7 +14,7 @@ export class AuthService {
   private token: string | null = null;
   private authStatusListener = new BehaviorSubject<boolean>(false);
   private apiBaseUrl = enviroment.apiURL;
-
+  private userId: number | null = null; // Add a userId field
 
   constructor(private http: HttpClient) {}
 
@@ -35,6 +35,7 @@ export class AuthService {
     localStorage.setItem('loggedInUserEmail', email);
     localStorage.setItem('token', token);
     this.token = token;
+    this.userId = this.extractUserIdFromToken(token); // Set userId here
     this.authStatusListener.next(true);
   }
 
@@ -43,6 +44,7 @@ export class AuthService {
     localStorage.removeItem('loggedInUserEmail');
     localStorage.removeItem('token');
     this.token = null;
+    this.userId = null; // Clear userId on logout
     this.authStatusListener.next(false);
   }
 
@@ -71,9 +73,46 @@ export class AuthService {
     const token = localStorage.getItem('token');
     if (token) {
       this.token = token;
+      this.userId = this.extractUserIdFromToken(token); // Initialize userId
       this.authStatusListener.next(true);
     } else {
       this.authStatusListener.next(false);
     }
   }
+  
+
+  getUserById(userId: number): Observable<any> {
+    const token = localStorage.getItem('token');
+    return this.http.get(`${this.apiBaseUrl}/user/${userId}`, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
+  }
+
+  getUserId(): number | null {
+    return this.userId;
+  }
+
+  // private extractUserIdFromToken(token: string): number | null {
+  //   try {
+  //     const payload = JSON.parse(atob(token.split('.')[1]));
+  //     console.log(payload.id);
+  //     return payload.id || null; // Assuming the user ID is stored in the "id" field
+  //   } catch (error) {
+  //     return null;
+  //   }
+  // }
+
+  private extractUserIdFromToken(token: string): number | null {
+    try {
+      const payload = JSON.parse(atob(token.split('.')[1]));
+      console.log('Decoded Payload:', payload);
+      return payload.userId || null; // Adjust based on actual token structure
+    } catch (error) {
+      console.error('Error parsing token:', error);
+      return null;
+    }
+  }
+  
 }
