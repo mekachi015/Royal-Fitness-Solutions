@@ -1,19 +1,18 @@
 package Royal_Fitness_Solutions.demo.authentication;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 public class RegisterRequest {
 
     private String firstname;
     private String lastname;
     private String email;
-    private int cellNumber;
+    private String cell_Number;
     private String password;
 }
