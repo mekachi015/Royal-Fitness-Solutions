@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms'; // Import FormsModule
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Import FormsModule
 import { HttpClientModule } from '@angular/common/http';
 import { AuthCompComponent } from './pages/auth-comp/auth-comp.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
@@ -16,6 +16,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { HomePageProfileComponent } from './components/home-page-profile/home-page-profile.component';
 import { MealAndWorkoutComponent } from './components/meal-and-workout/meal-and-workout.component';
 import { BmiCalculatorComponent } from './components/bmi-calculator/bmi-calculator.component';
+import { MealPlanQuestionaireComponent } from './components/meal-plan-questionaire/meal-plan-questionaire.component';
 
 
 @NgModule({
@@ -32,13 +33,15 @@ import { BmiCalculatorComponent } from './components/bmi-calculator/bmi-calculat
     HomePageProfileComponent,
     MealAndWorkoutComponent,
     BmiCalculatorComponent,
+    MealPlanQuestionaireComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
