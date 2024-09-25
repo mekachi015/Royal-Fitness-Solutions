@@ -17,6 +17,7 @@ import { HomePageProfileComponent } from './components/home-page-profile/home-pa
 import { MealAndWorkoutComponent } from './components/meal-and-workout/meal-and-workout.component';
 import { BmiCalculatorComponent } from './components/bmi-calculator/bmi-calculator.component';
 import { MealPlanQuestionaireComponent } from './components/meal-plan-questionaire/meal-plan-questionaire.component';
+import { MealPlanLifestyleQuestionarieComponent } from './components/meal-plan-lifestyle-questionarie/meal-plan-lifestyle-questionarie.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { MealPlanQuestionaireComponent } from './components/meal-plan-questionai
     MealAndWorkoutComponent,
     BmiCalculatorComponent,
     MealPlanQuestionaireComponent,
+    MealPlanLifestyleQuestionarieComponent,
 
   ],
   imports: [
