@@ -8,7 +8,14 @@ import { Router } from '@angular/router';
 })
 export class NavBarComponent {
 
-  constructor( private router: Router){}
+  currentRoute: string = '';
+
+  constructor(private router: Router) {
+    // Subscribe to router events to get the active route
+    this.router.events.subscribe(() => {
+      this.currentRoute = this.router.url; // Get the current URL
+    });
+  }
 
   goToHome() {
     this.router.navigate(['/home']);

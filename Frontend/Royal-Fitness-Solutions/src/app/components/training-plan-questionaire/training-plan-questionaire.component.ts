@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-training-plan-questionaire',
@@ -33,15 +34,44 @@ export class TrainingPlanQuestionaireComponent implements OnInit{
     if (this.trainingPlanForm.valid) {
       // Handle the form submission
       console.log('Form Submitted!', this.trainingPlanForm.value);
+      Swal.fire({
+        title: 'Success!',
+        text: 'Your training plan has been submitted successfully!',
+        icon: 'success',
+        confirmButtonText: 'OK'
+      });
       // You can also send the form data to your backend here
     } else {
       // Handle the case where the form is invalid
       console.log('Form is invalid');
+      Swal.fire({
+        title: 'Error!',
+        text: 'Please fill out all required fields correctly.',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      });
     }
   }
 
   onClear(): void {
-    this.trainingPlanForm.reset(); // Reset the form fields
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'Do you really want to clear the form?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, clear it!',
+      cancelButtonText: 'No, keep it'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.trainingPlanForm.reset(); // Reset the form fields
+        Swal.fire({
+          title: 'Cleared!',
+          text: 'The form has been cleared.',
+          icon: 'success',
+          confirmButtonText: 'OK'
+        });
+      }
+    });
   }
 
 }

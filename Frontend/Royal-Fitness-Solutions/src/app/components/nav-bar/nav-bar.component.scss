@@ -40,3 +40,10 @@ nav {
 .link-items a:hover {
     color: var(--secondary-colour); /* Change color on hover */
 }
+
+.link-items a.active {
+    color: var(--secondary-colour); /* Change color to the active color */
+    font-weight: bold; /* Optionally bold the active link */
+    border-bottom: 2px solid var(--secondary-colour); /* Optional underline for active link */
+}
+

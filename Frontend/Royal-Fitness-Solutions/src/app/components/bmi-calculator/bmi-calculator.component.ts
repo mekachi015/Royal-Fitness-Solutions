@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-bmi-calculator',
@@ -29,11 +30,30 @@ export class BmiCalculatorComponent {
     return 'Obesity';
   }
 
-  clearFields(): void { // clears the fields 
-    this.weightKg = null;
-    this.heightMeters = null;
-    this.bmi = null;
-    this.category = '';
+  clearFields(): void {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "Do you really want to clear the fields?",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, clear them!',
+      cancelButtonText: 'No, cancel!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.weightKg = null; // Resets the weight field
+        this.heightMeters = null; // Resets the height field
+        this.bmi = null; // Resets the BMI field
+        this.category = ''; // Resets the category field
+        Swal.fire(
+          'Cleared!',
+          'The fields have been cleared.',
+          'success'
+        );
+      }
+    });
   }
+  
 
 }
