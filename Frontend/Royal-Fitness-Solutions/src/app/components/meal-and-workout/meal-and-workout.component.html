@@ -1,0 +1,31 @@
+<div class="calendar-container">
+    <div class="weekdays">
+      <div *ngFor="let day of days" class="day">
+        <span class="day-name">{{ day.weekday }}</span>
+        <div class="date-circle" [class.today]="day.isToday">
+          {{ day.date }}
+        </div>
+      </div>
+    </div>
+  
+    <div class="day-details">
+        <div class="details-container">
+          <div class="meals">
+            <h3>Today's Meals</h3>
+            <ul>
+              <li>Breakfast: Oatmeal</li>
+              <li>Lunch: Salad</li>
+              <li>Dinner: Grilled Chicken</li>
+            </ul>
+          </div>
+          <div class="workouts">
+            <h3>Today's Workouts</h3>
+            <ul>
+              <li>Morning: Yoga</li>
+              <li>Evening: Cardio</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </div>
+  

@@ -1,0 +1,74 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Make the container stretch to fit its items */
+    background-color: #fff; /* Matches user profile background */
+    padding: 2rem; /* Matches padding of user profile */
+    border-radius: 10px; /* Matches border-radius */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Same shadow as user profile */
+    width: 80%; /* Uniform with user profile */
+    max-width: 1000px; /* Same max width */
+    margin: 20px auto;
+    font-family: 'Arial', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+input,
+textarea {
+    width: 97%;
+   // padding: 12px; /* Increased padding for better touch targets */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    resize: none; /* Prevents resizing of text areas */
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    width: 40%; /* Set button to full width */
+    padding: 12px; /* Increased padding for better touch targets */
+    background-color: var(--primary-colour);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 5px 0; /* Margin for spacing between buttons */
+}
+
+button:last-child {
+    margin-top: 10px; /* Add space above the second button */
+}
+
+button:hover {
+    background-color: var(--secondary-colour);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-container {
+        width: 95%; /* Make container wider on small screens */
+    }
+
+    button {
+        width: 100%; /* Keep buttons full-width on smaller screens */
+    }
+}

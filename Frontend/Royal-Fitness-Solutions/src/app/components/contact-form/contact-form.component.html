@@ -1,0 +1,36 @@
+<div class="form-container">
+    <h2>Get in Touch with Us</h2>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="firstName">First Name:</label>
+            <input type="text" formControlName="firstName" placeholder="Enter your first name" required />
+        </div>
+
+        <div>
+            <label for="lastName">Last Name:</label>
+            <input type="text" formControlName="lastName" placeholder="Enter your last name" required />
+        </div>
+
+        <div>
+            <label for="cellphone">Cellphone Number:</label>
+            <input type="tel" formControlName="cellphone" placeholder="Enter your cellphone number" required />
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" formControlName="email" placeholder="Enter your email" required />
+        </div>
+
+        <div>
+            <label for="userQuery">Your Query:</label>
+            <textarea formControlName="userQuery" placeholder="Please enter your query here..." required></textarea>
+        </div>
+
+        <div class="buttons">
+            <button type="submit">Submit</button>
+            <button type="button" (click)="onClear()">Clear</button>
+        </div>
+
+    </form>
+</div>
+       

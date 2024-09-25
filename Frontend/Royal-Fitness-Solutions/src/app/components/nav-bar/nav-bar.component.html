@@ -6,10 +6,10 @@
 
         <div class="link-items">
             <ul>
-                <li><a (click)="goToHome()">Home</a></li>
-                <li><a (click)="goToMeals()">Meal Plans</a></li>
-                <li><a (click)="goToTraining()">Training Plans</a></li>
-                <li><a (click)="goToContact()">Contact Us</a></li>
+                <li><a [ngClass]="{'active': currentRoute === '/home'}" (click)="goToHome()">Home</a></li>
+                <li><a [ngClass]="{'active': currentRoute === '/meals'}" (click)="goToMeals()">Meal Plans</a></li>
+                <li><a [ngClass]="{'active': currentRoute === '/training'}" (click)="goToTraining()">Training Plans</a></li>
+                <li><a [ngClass]="{'active': currentRoute === '/contact'}" (click)="goToContact()">Contact Us</a></li>
             </ul>
         </div>
     </nav>

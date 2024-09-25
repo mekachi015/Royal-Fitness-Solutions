@@ -1,0 +1,59 @@
+<div class="form-container">
+    <h2>Training Plan</h2>
+    <form [formGroup]="trainingPlanForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="fitnessGoals">Fitness Goals and Experience:</label>
+            <textarea formControlName="fitnessGoals" placeholder="What are your overall fitness goals?" required></textarea>
+        </div>
+
+        <div>
+            <label for="previousExperience">Previous Experience:</label>
+            <textarea formControlName="previousExperience" placeholder="Do you have any previous experience with working out?" required></textarea>
+        </div>
+
+        <div>
+            <label for="activities">Preferred Activities:</label>
+            <textarea formControlName="activities" placeholder="Activities or sports you'd like to incorporate." required></textarea>
+        </div>
+
+        <div>
+            <label for="injuries">Health and Limitations:</label>
+            <textarea formControlName="injuries" placeholder="Have you experienced any injuries or health conditions?" required></textarea>
+        </div>
+
+        <div>
+            <label for="exerciseAvoid">Exercises to Avoid:</label>
+            <textarea formControlName="exerciseAvoid" placeholder="Specific exercises or movements you should avoid." required></textarea>
+        </div>
+
+        <div>
+            <label for="workoutFrequency">Workout Frequency:</label>
+            <input type="number" formControlName="workoutFrequency" placeholder="How often can you commit to working out each week?" required />
+        </div>
+
+        <div>
+            <label for="preferredTime">Preferred Time for Workouts:</label>
+            <input type="text" formControlName="preferredTime" placeholder="What is your preferred time of day for workouts?" required />
+        </div>
+
+        <div>
+            <label for="equipment">Available Equipment:</label>
+            <textarea formControlName="equipment" placeholder="Do you have any equipment or facilities available?" required></textarea>
+        </div>
+
+        <div>
+            <label for="workoutPreferences">Workout Preferences:</label>
+            <textarea formControlName="workoutPreferences" placeholder="What kind of workouts do you enjoy?" required></textarea>
+        </div>
+
+        <div>
+            <label for="specificGoals">Specific Goals or Challenges:</label>
+            <textarea formControlName="specificGoals" placeholder="Any specific goals or challenges you'd like to focus on?" required></textarea>
+        </div>
+
+        <div class="buttons">
+            <button type="submit">Submit</button>
+            <button type="button" (click)="onClear()">Clear</button>
+        </div>
+    </form>
+</div>

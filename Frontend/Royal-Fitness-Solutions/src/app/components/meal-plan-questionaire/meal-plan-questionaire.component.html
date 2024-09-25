@@ -1,0 +1,30 @@
+<div class="form-container">
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="gender">Gender:</label>
+            <div class="gender-checkboxes">
+                <label>
+                    <input type="checkbox" formControlName="isMale" /> Male
+                </label>
+                <label>
+                    <input type="checkbox" formControlName="isFemale" /> Female
+                </label>
+            </div>
+        </div>
+
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" formControlName="age" placeholder="Enter your age" required />
+        </div>
+
+        <div>
+            <label for="medicalConditions">Medical Conditions:</label>
+            <input type="text" formControlName="medicalConditions" placeholder="Enter any medical conditions" />
+        </div>
+
+        <!-- <div class="buttons">
+            <button type="submit">Submit</button>
+            <button type="clear">Clear</button>
+        </div> -->
+    </form>
+</div>
