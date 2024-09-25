@@ -12,6 +12,7 @@ import { TrainingPageComponent } from './pages/training-page/training-page.compo
 import { UserQueryPageComponent } from './pages/user-query-page/user-query-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     UserQueryPageComponent,
     ContactPageComponent,
     NavBarComponent,
+    HomePageComponent,
 
   ],
   imports: [
