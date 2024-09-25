@@ -20,6 +20,8 @@ import { MealPlanQuestionaireComponent } from './components/meal-plan-questionai
 import { MealPlanLifestyleQuestionarieComponent } from './components/meal-plan-lifestyle-questionarie/meal-plan-lifestyle-questionarie.component';
 import { TrainingPlanQuestionaireComponent } from './components/training-plan-questionaire/training-plan-questionaire.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { AdminDashBoardComponent } from './pages/admin-dash-board/admin-dash-board.component';
+import { AdminDashComponent } from './components/admin-dash/admin-dash.component';
 
 
 @NgModule({
@@ -40,6 +42,8 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
     MealPlanLifestyleQuestionarieComponent,
     TrainingPlanQuestionaireComponent,
     ContactFormComponent,
+    AdminDashBoardComponent,
+    AdminDashComponent,
 
   ],
   imports: [
