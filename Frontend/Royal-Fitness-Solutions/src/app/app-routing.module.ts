@@ -7,6 +7,7 @@ import { TrainingPageComponent } from './pages/training-page/training-page.compo
 import { MealsPageComponent } from './pages/meals-page/meals-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { AuthGuardService } from './services/auth gaurd/auth-guard.service';
+import { AdminDashComponent } from './components/admin-dash/admin-dash.component';
 
 const routes: Routes = [
   
@@ -16,6 +17,8 @@ const routes: Routes = [
   { path: 'training', component: TrainingPageComponent, canActivate: [AuthGuardService]},
   { path: 'meals', component: MealsPageComponent,canActivate: [AuthGuardService]},
   { path: 'contact', component: ContactPageComponent,canActivate: [AuthGuardService]},
+
+  {path: 'admin', component: AdminDashComponent ,canActivate: [AuthGuardService]},
   // { path: '**', component: HomePageComponent}
   { path: '**', redirectTo: '/home' }
 
