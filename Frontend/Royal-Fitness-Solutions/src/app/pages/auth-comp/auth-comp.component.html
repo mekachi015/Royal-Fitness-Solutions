@@ -1,11 +1,17 @@
 <div class="auth-container">
+
+  <div class="welcome">
+    <h1>Welcome To Royal Fitness Solutions</h1>
+
+    
+  </div>
     <div class="form-wrapper" *ngIf="showLogin">
       <h2>Login</h2>
       <input [(ngModel)]="loginRequest.email" placeholder="Email" class="form-input" />
       <input [(ngModel)]="loginRequest.password" type="password" placeholder="Password" class="form-input" />
       <button (click)="onLogin()" class="btn">Login</button>
   
-      <span class="toggle-span">Don't have an account? <a  (click)="toggleForms()">Click here</a> to register</span>
+      <span class="toggle-span">Don't have an account? Click <a  (click)="toggleForms()" class ="here">here</a> to register</span>
     </div>
   
     <div class="form-wrapper" *ngIf="!showLogin">

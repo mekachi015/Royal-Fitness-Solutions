@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* This is for the primary, secondary and  tetiary colours */
+:root {
+    --primary-colour: #102037;  
+    --secondary-colour: #d3c686; 
+    --tertiary-colour: #fff;  
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}

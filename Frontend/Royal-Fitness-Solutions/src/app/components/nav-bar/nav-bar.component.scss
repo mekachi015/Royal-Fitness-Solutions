@@ -1,0 +1,42 @@
+.navbar-container {
+    width: 100%; /* Full width */
+    background-color: var(--primary-colour); /* Light background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+
+}
+
+nav {
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between image and links */
+    align-items: center; /* Align items vertically */
+    padding: 10px 10px; /* Padding around the nav */
+}
+
+.image-container img {
+    max-height: 60px; /* Control the height of the logo */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.link-items ul {
+    display: flex; /* Flexbox for the list */
+    justify-content: space-around; /* Space around the list items */
+    align-items: center; /* Center vertically */
+    list-style: none; /* Remove bullets */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.link-items li {
+    margin: 0 15px; /* Space between links */
+}
+
+.link-items a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Text color */
+    font-weight: 600; /* Bold font */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.link-items a:hover {
+    color: var(--secondary-colour); /* Change color on hover */
+}

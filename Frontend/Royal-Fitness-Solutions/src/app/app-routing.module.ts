@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthCompComponent } from './pages/authentication page/auth-comp/auth-comp.component';
+import { AuthCompComponent } from './pages/auth-comp/auth-comp.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
 const routes: Routes = [
