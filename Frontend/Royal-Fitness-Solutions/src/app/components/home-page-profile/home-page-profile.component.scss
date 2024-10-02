@@ -1,5 +1,5 @@
 .profile-container {
-    padding: 3rem;
+    padding-top: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@
 
 .user-info-container span {
     margin-bottom: 0.5rem;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
 }
 
 .image-container {
@@ -38,18 +38,18 @@
 }
 
 .image-container img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #4CAF50;
+    border: 4px solid #d3c686;
 }
 
 .icon-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 1rem;
+    
 }
 
 .notification-icon {
