@@ -67,13 +67,69 @@ button:hover {
     background-color: var(--secondary-colour);
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+@media (min-width: 430px) {
     .form-container {
-        width: 95%; /* Make container wider on small screens */
+       //padding: 15px; /* Add padding around the form container */
+        font-size: 14px; /* Smaller font size for better fit */
+    }
+    #fitnessGoals{
+        width: 20px;
+    }
+    form {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack form elements vertically */
+    }
+
+    h3, h4 {
+        text-align: center; /* Center align headers */
+        font-size: 1.5rem; /* Adjust header size */
+    }
+
+    .input-group {
+        margin-bottom: 15px; /* Space between input groups */
+    }
+
+    label {
+        margin-bottom: 5px; /* Space between label and input */
+        font-weight: bold; /* Make labels bold for emphasis */
+    }
+
+    input {
+        padding: 10px; /* Add padding for input fields */
+        border: 1px solid #ccc; /* Light border */
+        border-radius: 4px; /* Rounded corners */
+        font-size: 14px; /* Match input font size */
+        width: 100%; /* Full width for inputs */
+        box-sizing: border-box; /* Include padding in width */
+    }
+
+    .buttons {
+        display: flex; /* Flex for button alignment */
+        justify-content: space-between; /* Space between buttons */
+        margin-top: 10px; /* Space above buttons */
     }
 
     button {
-        width: 100%; /* Keep buttons full-width on smaller screens */
+        padding: 10px; /* Add padding to buttons */
+        font-size: 14px; /* Button font size */
+        cursor: pointer; /* Pointer cursor for buttons */
+        border: none; /* Remove default border */
+        border-radius: 4px; /* Rounded corners */
+        background-color: var(--primary-colour); /* Primary button color */
+        color: white; /* White text */
+        transition: background-color 0.3s; /* Smooth color transition */
+    }
+
+    button:hover {
+        background-color: var(--secondary-colour); /* Change color on hover */
+    }
+
+    button[type="button"] {
+        background-color: var(--primary-colour); /* Red for clear button */
+    }
+
+    button[type="button"]:hover {
+        background-color: var(--secondary-colour); /* Darker red on hover */
     }
 }
+

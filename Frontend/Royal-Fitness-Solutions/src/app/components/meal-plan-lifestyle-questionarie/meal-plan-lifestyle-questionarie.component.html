@@ -1,63 +1,62 @@
 <div class="form-container">
-    <!-- Second Form: Lifestyle and Goals -->
     <form [formGroup]="lifestyleForm" (ngSubmit)="onLifestyleSubmit()">
         <h3>Lifestyle and Goals</h3>
 
-        <div>
+        <div class="input-group">
             <label for="fitnessGoals">What are your overall fitness goals?</label>
             <input type="text" formControlName="fitnessGoals" placeholder="e.g., weight loss, muscle gain, improved performance" required />
         </div>
 
-        <div>
+        <div class="input-group">
             <label for="workoutFrequency">How often do you typically work out?</label>
             <input type="text" formControlName="workoutFrequency" placeholder="e.g., intensity, duration" required />
         </div>
 
-        <div>
+        <div class="input-group">
             <label for="dietaryRestrictions">Do you have any dietary restrictions or allergies?</label>
             <input type="text" formControlName="dietaryRestrictions" placeholder="e.g., vegetarian, vegan, gluten-free" />
         </div>
 
-        <div>
+        <div class="input-group">
             <label for="dailySchedule">What is your typical daily schedule?</label>
             <input type="text" formControlName="dailySchedule" placeholder="e.g., work hours, meal times" />
         </div>
 
         <h4>Food Preferences and Habits</h4>
-        <div>
+        <div class="input-group">
             <label for="favoriteFoods">What are your favorite foods and cuisines?</label>
             <input type="text" formControlName="favoriteFoods" placeholder="e.g., Italian, Chinese" />
         </div>
 
-        <div>
+        <div class="input-group">
             <label for="dislikedFoods">Are there any foods you particularly dislike or avoid?</label>
             <input type="text" formControlName="dislikedFoods" placeholder="e.g., broccoli, nuts" />
         </div>
 
-        <div>
+        <div class="input-group">
             <label for="eatOutFrequency">How often do you eat out?</label>
             <input type="text" formControlName="eatOutFrequency" placeholder="e.g., once a week" />
         </div>
 
-        <div>
+        <div class="input-group">
             <label for="cookingHabits">Do you typically cook at home, or do you rely on prepared meals?</label>
             <input type="text" formControlName="cookingHabits" placeholder="e.g., cook at home" />
         </div>
 
         <h4>Nutritional Needs</h4>
-        <div>
+        <div class="input-group">
             <label for="medicalConditionsDiet">Have you been diagnosed with any medical conditions that affect your diet?</label>
             <input type="text" formControlName="medicalConditionsDiet" placeholder="e.g., diabetes, heart disease" />
         </div>
 
-        <div>
+        <div class="input-group">
             <label for="pregnantBreastfeeding">Are you pregnant or breastfeeding?</label>
             <input type="text" formControlName="pregnantBreastfeeding" placeholder="Yes/No" />
         </div>
 
-       <div class="buttons">
-        <button type="submit">Submit Lifestyle Info</button>
-        <button type="button" (click)="clearLifestyleForm()">Clear</button>
-       </div>
+        <div class="buttons">
+            <button type="submit">Submit Info</button>
+            <button type="button" (click)="clearLifestyleForm()">Clear</button>
+        </div>
     </form>
 </div>

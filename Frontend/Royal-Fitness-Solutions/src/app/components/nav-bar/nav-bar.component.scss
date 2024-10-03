@@ -61,11 +61,14 @@
 // }
 
 /* Navbar container */
+/* Navbar container */
 .navbar-container {
     width: 100%;
     background-color: var(--primary-colour);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    
+    position: sticky; /* Make the navbar sticky */
+    top: 0; /* Stay at the top */
+    z-index: 1000; /* Ensure it stays on top of other content */
 }
 
 nav {
@@ -169,6 +172,11 @@ nav {
 
 /* Media queries for screens smaller than 430px */
 @media (min-width: 430px) {
+    .navbar-container{
+        position: sticky; /* Make the navbar sticky */
+        top: 0; /* Stay at the top */
+        z-index: 1000; /* Ensure it stays on top of other content */
+    }
     nav {
         padding: 10px 20px;
     }
