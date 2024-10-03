@@ -68,3 +68,65 @@ h3, h4 {
     margin: 10px 0;
     color: #333;
 }
+
+@media (min-width: 430px) {
+   
+    h2 {
+        font-size: 20px; /* Smaller heading size */
+        margin-bottom: 15px; /* Adjust margin */
+    }
+
+    label {
+        font-size: 14px; /* Smaller font size for labels */
+    }
+
+    input {
+        font-size: 14px; /* Smaller font size for input fields */
+        padding: 8px; /* Adjust padding */
+    }
+
+    .button-container{
+        display: flex;
+        justify-content: space-between;
+    }
+    button {
+        padding: 8px; /* Adjust button padding */
+        font-size: 14px; /* Smaller font size for buttons */
+
+    }
+
+    .result-container {
+        padding: 10px; /* Adjust padding in the result container */
+    }
+
+    h3, h4 {
+        font-size: 16px; /* Smaller font size for result headings */
+        margin: 5px 0; /* Adjust margins */
+    }
+
+    #weight, #height{
+        width: 330px;
+    }
+
+    .save-details {
+        width: 80%;
+        padding: 10px;
+        background-color: var(--primary-colour);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin: 5px;
+    }
+    
+    // /* Add this hover effect */
+    // .save-details:hover {
+    //     background-color: var(--secondary-colour); /* Change color on hover */
+    // }
+
+    button:hover{
+        background-color: var(--secondary-colour);
+    }
+ 
+}

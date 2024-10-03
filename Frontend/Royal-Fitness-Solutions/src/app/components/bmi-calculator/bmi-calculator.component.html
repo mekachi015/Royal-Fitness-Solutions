@@ -8,13 +8,18 @@
             <label for="height">Height (m):</label>
             <input type="number" id="height" [(ngModel)]="heightMeters" name="height" required>
   
-            <button type="submit">Calculate BMI</button>
+           
+           <div class="button-container">
+            <button type="submit" (click)="calculateBMI()">Calculate BMI</button>
             <button type="button" (click)="clearFields()">Clear</button>
+           </div>
         </form>
     </div>
   
     <div class="result-container" *ngIf="bmi !== null">
         <h3>Your BMI: {{ bmi | number:'1.2-2' }}</h3>
-        <h4>Category: {{ category }}</h4>
+        <h4>Category: {{ category }}</h4> 
+
+        <button class="save-details">Save Details</button>
     </div>
 </div>
