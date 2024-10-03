@@ -62,3 +62,39 @@
 .notification-icon:hover {
     fill: #FF5722;
 }
+
+
+@media (min-width: 430px) {
+    .profile-container {
+        padding: 1rem;
+    }
+
+    .user-profile {
+        flex-direction: column; /* Stack the items vertically */
+        width: 100%; /* Full width */
+        padding: 1rem;
+    }
+
+    .user-info-container span {
+        font-size: 1rem; /* Reduce font size for small screens */
+        margin-bottom: 0.3rem;
+    }
+
+    .image-container img {
+        width: 80px; /* Smaller image size */
+        height: 80px;
+    }
+
+    .icon-container {
+        margin-left: 0; /* Remove margin for smaller layout */
+        margin-top: 1rem; /* Add space above the icon */
+        
+    }
+
+    .notification-icon {
+
+        
+        width: 25px; /* Smaller icon size */
+        height: 25px;
+    }
+}
