@@ -1,10 +1,18 @@
 <div class="navbar-container">
     <nav>
         <div class="image-container">
-           <a href="#"><img src="/assets/images/royal-fitness-solutions-gold-logo.png" alt="royal-fitness-logo"></a> 
+            <a href="#"><img src="/assets/images/royal-fitness-solutions-gold-logo.png" alt="royal-fitness-logo"></a>
         </div>
 
-        <div class="link-items">
+        <div class="hamburger" (click)="toggleMenu()">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#d3c686" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg>
+            </span>
+        </div>
+
+        <div class="link-items" [ngClass]="{'active': menuOpen}">
             <ul>
                 <li><a [ngClass]="{'active': currentRoute === '/home'}" (click)="goToHome()">Home</a></li>
                 <li><a [ngClass]="{'active': currentRoute === '/meals'}" (click)="goToMeals()">Meal Plans</a></li>
@@ -13,4 +21,20 @@
             </ul>
         </div>
     </nav>
+
+    <!-- Sidebar menu for mobile view -->
+    <div class="mobile-menu" [ngClass]="{'open': menuOpen}">
+        <div class="close-btn" (click)="toggleMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#d3c686" class="bi bi-x-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+            </svg>
+        </div>
+        <ul>
+            <li><a [ngClass]="{'active': currentRoute === '/home'}" (click)="goToHome()">Home</a></li>
+            <li><a [ngClass]="{'active': currentRoute === '/meals'}" (click)="goToMeals()">Meal Plans</a></li>
+            <li><a [ngClass]="{'active': currentRoute === '/training'}" (click)="goToTraining()">Training Plans</a></li>
+            <li><a [ngClass]="{'active': currentRoute === '/contact'}" (click)="goToContact()">Contact Us</a></li>
+        </ul>
+    </div>
 </div>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,29 +8,38 @@ import { Router } from '@angular/router';
 })
 export class NavBarComponent {
 
+  menuOpen: boolean = false;
   currentRoute: string = '';
 
   constructor(private router: Router) {
-    // Subscribe to router events to get the active route
-    this.router.events.subscribe(() => {
-      this.currentRoute = this.router.url; // Get the current URL
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.currentRoute = event.url;
+      }
     });
+  }
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
   }
 
   goToHome() {
     this.router.navigate(['/home']);
+    this.toggleMenu();  // Close the menu after navigation
   }
 
   goToMeals() {
     this.router.navigate(['/meals']);
+    this.toggleMenu();
   }
 
   goToTraining() {
     this.router.navigate(['/training']);
+    this.toggleMenu();
   }
 
   goToContact() {
     this.router.navigate(['/contact']);
+    this.toggleMenu();
   }
-
 }
